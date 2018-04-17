@@ -26,5 +26,12 @@ public class tests {
 		assertTrue(roll > 0);
 		//fail("Not yet implemented");
 		}
+	
+	@Test
+	public void aTest() {
+		RollDie myDie = new RollDie();
+		myDie.readList();
+		assertEquals(myDie.getDiesStates().size(),3);
+	}
 	}
 
