@@ -8,7 +8,7 @@ public class RollDie {
 	
 
 	public int getDieState() {
-		//int dieState=(int)(Math.random()*6+1);
+		int dieState = (int)(Math.random()*6+1);
 		return dieState;
 }
 }

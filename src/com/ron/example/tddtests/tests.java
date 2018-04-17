@@ -1,5 +1,6 @@
 package com.ron.example.tddtests;
 
+
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -20,9 +21,10 @@ public class tests {
 
 	@Test
 	public void test() {
-		public void testgetDieState() {
-		assertEquals(getDieState(),"0");
-		//getDiceState myDie = new getDiceState;
+		RollDie myDie = new RollDie();
+		int roll = myDie.getDieState();
+		assertTrue(roll > 0);
 		//fail("Not yet implemented");
 		}
 	}
+
