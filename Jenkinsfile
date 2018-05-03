@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('checkout') { checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/RonCGitJenkins/CasinoDice.git']]])
+    stage('build')
       steps {
         sh 'echo Building ${BRANCH_NAME}...'
+        { checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/RonCGitJenkins/CasinoDice.git']]])
       }
     }
   }
